@@ -1,0 +1,730 @@
+1 
+a)
+<!-- Write a HTML program, to explain the working of hyperlinks using <a> tag and href target Attributes. -->
+<html>
+<body>
+	<h1>To demonstrate HyperLinks</h1>
+	<a href='https://www.google.com/'>To open Google(Defaulf)</a>	<br>
+	<a href='https://www.google.com/' target='_blank'>To open Google in new tab.</a> <br>
+	<a href='https://www.google.com/' target='_self'>To open Google in same tab.</a>  <br>	
+</body>
+</html>
+
+ 
+
+
+1b)
+<!--Write a program to embed internal and external JavaScript in a web page-->
+<html>
+<body>
+	<p id='internal_js'></p>
+	<p id='external_js'></p>
+	<script>
+		document.getElementById('internal_js').innerHTML = 'This is from internal JS.';
+	</script>
+	<script src='script.js' ></script>
+</body>
+</html>
+Script.js
+document.getElementById('external_js').innerHTML = 'This is from external JS.';
+ 
+2
+a)
+<!--Write a program to demonstrate the various ways you can reference a color in CSS.-->
+<html>
+<body>
+	<p style='color:red' >This is using direct color name.</p>
+	<p style='color:#333'>This is using hex code.</p>
+	<p style='color:rgb(0,255,0)' >This is using rgb.</p>
+	<p style='color:rgba(0,0,255,0.5)'>This is using rgba.</p>
+	<p style='color:hsl(300,100%,50%)'>This is using hsl.</p>
+	<p style='color:hsl(300,100%,50%,0.5)'>This is using hsla.</p>
+</body>
+</html>
+
+
+
+
+
+b)
+<!--   Write a program using document object properties and methods -->
+<html>
+<body>
+	<form></form>	<form></form>
+	<a href="#"></a>  <a href="#"></a>  <a href="#"></a>
+	<p id='p1'></p>
+	<script>
+		document.getElementById('p1').innerHTML += 'Hello World ';	
+
+
+		document.write('Current URL : ' + document.URL + '<br>');			
+		document.write('No of forms : ' + document.forms.length + '<br>');	
+		document.write('No of Links : ' + document.links.length + '<br>');	
+
+		var newPara=document.createElement('p');
+		newPara.textContent = 'Dynamically added Paragraph';
+		document.body.appendChild(newPara);
+
+		document.body.style.backgroundColor = 'red' ;
+	</script>
+</body>
+</html>
+ 
+3
+a)
+<!-- Write a HTML program, to explain the working of tables. (use tags: <table>, <tr>, <th>, <td> and attributes: border, rowspan, colspan) -->
+<html>
+<body>
+	<table border='1'>
+		<tr>
+			<th rowspan='2'>S.no</th>
+			<th colspan='2'>Name</th>
+			<th rowspan='2'>Per</th>
+		</tr>
+		<tr>
+			<th>First Name</th>
+			<th>Last Name </th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>Adi</td>
+			<td>Satti</td>
+			<td>90</td>
+		</tr>
+	</table>
+</body>
+</html>
+b)
+<!-- Write a program to display week days using switch case.  -->
+<html>
+<body>
+	<script>
+		var num = parseInt(prompt('Enter a number : '));
+		var day;
+		switch(num)						input:4
+		{
+			case 1 : day='monday';     break; 
+			case 2 : day='tuesday';     break;
+			case 3 : day='wednesday';  break;
+			case 4 : day='thursday';  break;
+			case 5 : day='Friday';       break;
+			case 6 : day='saturday'; break;
+			case 7 : day='sunday';    break;
+
+			default : day='not a valid day' ;
+		}
+		document.write(day);
+	</script>
+</body>
+</html>
+4)
+a)
+<!-- Write a program using the following terms related to CSS font and text:
+      i.  font-size ii. font-weight iii. font-style -->
+<html>
+<body>
+	<p style='font-size: 25px ; ' >This text is large in size.</p> --No quotes for px.
+	<p style='font-weight: bolder;'>This text is bolder.</p>
+	<p style='font-style: italic;'>This text is italic.</p>
+</body>
+</html>
+b)
+<!-- Write a program using window object properties and methods  -->
+<html>
+<body>
+	<script>
+		window.alert('Hello,World');
+		var name = window.prompt('Enter your name : ');
+
+		var confirm = window.confirm('Do you want to view delete the files ?');
+
+		document.write('Window Width : ' + window.innerWidth + '<br>');
+		document.write('Window Height : ' + window.innerHeight + '<br>');
+		document.write('Current URL : ' + window.location.href + '<br>');
+		document.write('Screen Height : ' + window.screen.height + '<br>');
+		document.write('Screen Width : ' + window.screen.width + '<br>');
+
+		window.open('https://www.google.com/','_blank',"width=400px; height=400px;")
+	</script>
+</body>
+</html>
+5)
+a)
+<!--  Write a HTML program, in such a way that, rather than placing large images on a page,
+       the preferred technique is to use thumbnails by setting the height and width parameters to
+       something like to 100*100 pixels. Each thumbnail image is also a link to a full sized
+       version of the image. Create an image gallery using this technique. -->
+<html>
+<body>
+	<a href="img1.jpg"> <img src="img1.jpg" width="100px" height="100px"></a>
+	<a href="img2.jpg"> <img src="img2.jpg" width="100px" height="100px"></a>
+</body>
+</html>
+
+b)<!-- Write a program to print 1 to 10 numbers using for, while and do-while loops.  -->
+<html>
+<body>
+	<script>
+		document.write("Using for loop" + "<br><br>");
+		for(var i=1;i<=10;i++)
+			document.write(i+" ");
+	
+		var i=1;
+		document.write("<br><br>"+ "Using While loop" +"<br> <br>");
+		while(i<=10){
+			document.write(i+" ");
+			i++;
+		}
+		
+		i=1;
+		document.write("<br><br>"+ "Using do-while loop" + "<br><br>");
+		do{
+			document.write(i+" ");
+			i++;
+		}while(i<=10);
+
+	</script>
+</body>
+</html>
+ 
+6)
+a) <!-- Write a program to apply different types of selector forms pseudo-element selector, combinator selector. -->
+<html>
+<head>
+	<style>
+		pre::first-letter{ font-size : 2.5em;}
+		pre::first-line{font-weight : bold;}
+		h1::before{content : '❤️';}
+		h1::after{content : '🥹';}
+		::selection{background-color:red}
+
+		 div p { color: blue; } /* Descendant Selector */
+        		div > p { font-weight: bold; } /* Child Selector */
+        		h2 + p { color: red; } /* Adjacent Sibling Selector */
+       		h2 ~ p { text-decoration: underline; } /* General Sibling Selector */
+
+		
+	</style>
+</head>
+<body>
+	<h1>Pseudo Element Selector</h1>
+	<pre>First Line of para. <br> Second Line of para.</pre><br>
+
+	<div>
+       		 <p>Inside a div (descendant).</p>
+        	<p>Direct child of div.</p>
+       		 <section>
+           		 <p>Not a direct child of div,so it not bold.</p>
+       		 </section>
+   	 </div>
+    	<h2>Heading</h2>
+    	<p>Immediately after h2.</p>
+   	 <p>Another paragraph after h2.</p>
+	
+</body>
+</html>
+
+
+
+
+
+
+
+b)
+<!--  Write a program using math object properties and methods -->
+<html>
+<body>
+	<script>
+		document.write('PI value : ' + Math.PI  + "<br>");
+		document.write('Random value : ' + Math.random() +"<br>" );
+		document.write('Min Value : '+ Math.min(10,1,20) +"<br>");
+		document.write('Max Value : '+ Math.max(10,1,20) +"<br>");
+		document.write('Abs Value : '+ Math.abs(-25) +"<br>");
+		document.write('Square root(64) : '+ Math.sqrt(64) +"<br>");
+		document.write('Power(2,3) : '+ Math.pow(2,3) +"<br>");
+		document.write('Floor(22.4) : '+ Math.floor(22.4)+ "<br>");
+		document.write('Ceil(22.4) : '+ Math.ceil(22.4) +"<br>");
+	
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+ 
+7)
+a)<!-- Create a HTML document that has your image and your friend’s image with a specific
+       height and width. Also when clicked on the images it should navigate to their respective
+        profiles. -->
+<html>
+<body>
+	<a href="myprofile.html"><img src="my_image.jpg" alt="my_image" width="100px" height="100px"></a>
+	<a href="friendprofile.html"><img src="friend_image.jpg" alt="friend_image" width="100px" height="100px"></a>
+</body>
+</html>
+myprofile.html			
+<html> 
+<body>
+	<h1>My Profile</h1>
+	<p> Name : Adi <br> Age : 18 </p>
+</body> 
+</html>
+friendprofile.html
+<html> 
+<body>
+	<h1>Friend Profile</h1>
+	<p> Name : Easwar <br> Age : 19 </p>
+</body>
+</html>
+b)
+<!-- Develop a program to determine whether a given number is an ‘ARMSTRONG  NUMBER’ or not. -->
+<html>
+<body>
+	<script>
+		var num = parseInt(prompt('Enter a number : '));
+		var temp=num,sum=0;
+		while(temp>0)
+		{
+			var digit = temp%10;
+			sum = sum + Math.pow(digit,num.toString().length);
+			temp=Math.floor(temp/10);
+		} 
+		
+		if(sum==num)
+			document.write('Armstrong Number');
+		else
+			document.write('Not an armstrong Number');
+	</script>
+</body>
+</html>	for input : 153 , o/p:
+
+8)
+a) <!--Write a HTML program, that makes use of <article>, <aside>, <figure>, <figcaption>,
+      <footer>, <header>, <main>, <nav>, <section>, <div>, <span> tags  -->
+<html>
+<body style='text-align:center;'>
+	<header>My First Blog</header>
+	<nav> <a href="#">Home</a> | <a href="#">News</a> | <a href="#">Login</a> </nav>	
+	<main>
+		<div>
+			<section>
+				<article>
+					<p>This my first Article</p>
+					<p><span>Technology</span> is leading enpowerment in the current era</p>
+					<figure>
+						<img src="img1.jpg">
+						<figcaption>Technology</figcaption>
+					</figure>
+				</article>
+			</section>
+		</div>
+	</main>
+
+	<footer> &copy Rights Resereved. </footer>		
+
+</body>
+</html>
+b)
+<!-- Write a program using string object properties and methods -->
+<html>
+<body>
+	<script>
+		var text=" JavaScript is Awesome ";
+		document.write("Length : " + text.length  + "<br>");
+		document.write("UpperCase : " + text.toUpperCase() + "<br>");
+		document.write("LowerCase : " + text.toLowerCase() + "<br>");
+		document.write("Replaced Text : " + text.replace('Awesome','Web development   language') + "<br>");
+		document.write("Trim : " + text.trim() + "<br>");
+		document.write("Index of 'Script' : " + text.indexOf('Script') + "<br>");
+		document.write("Char At index 5 : " + text.charAt(5) + "<br>");
+		document.write("SubString(1,12) : " + text.substring(1,12) + "<br>");	/*start and end index*/
+		var concat = text.concat('I love it!') ;
+		document.write("Concat : " + concat);
+
+	</script>
+</body>
+</html> 
+9)
+a)
+<!-- Write a program, to explain the importance of CSS Box model using
+         i. Content  ii. Border   iii. Margin   iv. Padding  -->
+<html>
+<head>
+	<style>
+		div{
+			width: 200px;
+			height: 200px;
+			background-color : red;
+
+			border : 2px solid black;
+			margin : 10px;
+			padding : 50px;	
+		}
+	</style>
+</head>
+<body>
+	<div>This is content.</div>
+</body>
+</html>
+b)
+<!-- Write a program to display the denomination of the amount deposited in the bank in terms
+     of 100’s, 50’s, 20’s, 10’s, 5’s, 2’s & 1’s. (Eg: If deposited amount is Rs.163, the output
+      should be 1-100’s, 1-50’s, 1- 10’s, 1-2’s & 1-1’s) -->
+<html>
+<body>
+	<script>
+		var amount = parseInt(prompt("Enter Amount :"));
+		var denomination = [100,50,20,10,5,2,1];
+		
+		var result = "<table border='1'> ";
+		for(var denom of denomination)
+		{
+			var temp = Math.floor(amount/denom);
+			result += "<tr> <td> " + denom + " </td> <td>" + temp + " </td> </tr>";
+			amount = amount %denom;
+		}
+		
+		result += "</table>";
+		document.write(result);
+	</script>
+</body>
+</html>
+ 
+10)
+a) <!--  
+	Write a program to apply different types of selector forms
+         i. Simple selector (element, id, class, group, universal)
+         ii. Pseudo-class selector
+         iii. Pseudo-element selector
+-->
+
+<html>
+<head>
+	<style>
+		*{font-style:italic;}
+		h3{color:red;}
+		#para-1{color:blue;}
+		.para-2{color:green;}
+		h3,.para-2{text-decoration: underline double;}
+
+
+		a:unvisited{color:blue; }
+		a:hover{color:green;}
+		a:active{color:violet;}
+		a:visited{color:red;}
+
+		pre::first-letter{ font-size : 2.5em;}
+		pre::first-line{font-weight : bold;}
+		h1::before{content : '❤️';}
+		h1::after{content : '🥹';}
+		::selection{background-color:red}
+
+	</style>
+</head>
+<body>
+	<h3>This is heading</h3>
+	<p id="para-1">This is para-1</p>
+	<p class="para-2">This is para-2</p>
+	
+	<a href="#">Click Me</a>
+
+	<h1>Pseudo Element Selector</h1>
+	<pre>First Line of para. <br> Second Line of para.</pre><br>
+
+</body>
+</html>
+ 
+b) <!-- Write a program using date object properties and methods -->
+<html>
+<body>
+	<script>
+		var d = new Date();
+		document.write('Year : ' + d.getFullYear() + "<br>");
+		var month = d.getMonth() + 1;
+		document.write('Month : ' + month + "<br>");
+		document.write('Date : ' + d.getDate() + "<br>");
+		document.write('Day : ' + d.getDay() + "<br>");
+		document.write('Hours : ' + d.getHours() + "<br>");
+		document.write('Minutes : ' +  d.getMinutes() + "<br>");
+		document.write('Seconds : ' + d.getSeconds() + "<br>");
+		document.write('MilliSeconds : ' + d.getMilliseconds() + "<br>");
+
+	</script>
+</body>
+</html>
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+ 
+11)
+a) <!-- Write a HTML program, to explain the working of lists. -->
+<html>
+<body>
+	Branches
+	<ol>
+		<li>CSE</li>
+		<li>CSM</li>
+		<li>CIC</li>
+	</ol>
+
+	Branches
+	<ul>
+		<li>CSE</li>
+		<li>CSM</li>
+		<li>CIC</li>
+	</ul>
+
+	Courses
+	<ol>
+		<li>B.Tech
+			<ul>
+				<li>CSE</li>
+				<li>CSM</li>
+				<li>CIC</li>
+			</ul>
+		</li>
+		<li>M.B.A</li>
+	</ol>
+
+	Branches
+	<dl>
+		<dt>CSE</dt>
+			<dd>Computer Science & Engineering</dd>
+		<dt>IT</dt>
+			<dd>Information Technology</dd>
+	</dl>
+</body>
+</html>
+ 
+
+b) 
+<!-- Write a program to print data in object using for-in, for-each, and for-of loops. -->
+<html>
+<body>
+
+	<script>
+		document.write('Using for-in loop' + "<br>");
+		var student = {
+			name 	: 'Adi',
+			regd_no : '23K61A05G5',
+			course  : 'B.Tech'
+		};
+		
+		for(var key in student)
+			document.write(key + " : " + student[key] + "<br>");
+
+		document.write('Using forEach() loop' + "<br>");
+		Object.entries(student).forEach(entry);
+		function entry([key,value]){
+			document.write(key + " : " + value + "<br>");
+		}
+
+		document.write('Using for-of loop' + "<br>");
+		for(var value of Object.entries(student))
+			document.write(value[0] + " : " + value[1] + "<br>");
+	</script>
+</body>
+</html>
+
+
+ 
+12)
+a) <!-- Write a HTML program to explain the working of tables by preparing a time table. -->
+<html>
+<body>
+	<table border="1" style="text-align:center;">
+		<tr>
+			<th></th>
+			<th>9:00-11:00</th>
+			<th>11:00-12:00</th>
+			<th>12:00-1:00</th>
+			<th>1:00-:3:00</th>
+			<th>3:00-4:00</th>
+		</tr>
+
+		<tr>
+			<th>Mon</th>
+			<td>Maths</td>
+			<td>Physics</td>
+			<td rowspan="6">LUNCH</td>
+			<td colspan="2">Chemistry</td>
+		</tr>
+
+		<tr>
+			<th>Tue</th>
+			<td colspan="2">C</td>
+			<td>C++</td>
+			<td>Java</td>
+		</tr>
+		
+		<tr>
+			<th>Wed</th>
+			<td>Maths</td>
+			<td>Physics</td>
+			<td colspan="2">Chemistry</td>
+		</tr>
+
+		<tr>
+			<th>Thur</th>
+			<td colspan="2">C</td>
+			<td>C++</td>
+			<td>Java</td>
+		</tr>
+
+		<tr>
+			<th>Fri</th>
+			<td>Maths</td>
+			<td>Physics</td>
+			<td colspan="2">Chemistry</td>
+		</tr>
+
+		<tr>
+			<th>Sat</th>
+			<td colspan="2">C</td>
+			<td>C++</td>
+			<td>Java</td>
+		</tr>
+
+
+	</table>
+</body>
+</html>
+
+
+
+
+
+b) <!--Write a  program to explain different ways for taking input and displaying output.  -->
+<html>
+<body>
+	<p id="para-1"></p>
+	<script>
+		var name = window.prompt("Enter Your Name : ");
+		var age = parseInt(prompt("Enter Your Age : "));
+		var per = parseFloat(prompt("Enter your Per : "));
+		
+		window.alert('View your Details here');
+		document.getElementById('para-1').innerHTML = "Your Details are : ";
+		document.write("Hi ," + name + "<br>");
+		document.write("Your age is " + age + "<br>");
+		document.write("You got " + per + "<br>");
+		
+		console.log('Thank You');
+		
+	</script>
+</body>
+</html>
+
+ 
+13)
+a) <!--  Write a HTML program, in such a way that, rather than placing large images on a page, the preferred technique is to use thumbnails by setting the height and width parameters to  something like to 100*100 pixels. Each thumbnail image is also a link to a full sized version of the image. Create an image gallery using this technique. -->
+<html>
+<body>
+	<a href="img1.jpg"> <img src="img1.jpg" width="100px" height="100px"></a>
+	<a href="img2.jpg"> <img src="img2.jpg" width="100px" height="100px"></a>
+</body>
+</html>
+ 
+
+
+
+
+ 
+b) <!--  Write a program using regex and string object properties and methods. -->
+<html>
+<body>
+	<script>
+		var regex = /hello/ig;
+		var text = 'Hello Everyone , Hello to World ';
+
+		document.write('RegEx Source : ' + regex.source + "<br>");
+		document.write('RegEx Flags  : ' + regex.flags + "<br>");
+		document.write('RegEx Global : ' + regex.global + "<br>");
+
+		document.write('Does "Hello" Present in the text ? : "' + regex.test(text) +  "<br>");
+
+		var result = regex.exec(text);
+		document.write('First Match Found at index : ' + result.index + "<br>");
+		document.write('Matched with the content : ' + result[0]  + "<br>");
+
+		var replacedText = text.replace(regex,"Hi");
+		document.write("Replaced Text : " + replacedText + "<br><br>");
+
+
+
+		var text=" JavaScript is Awesome ";
+		
+		document.write("Length : " + text.length  + "<br>");
+		document.write("UpperCase : " + text.toUpperCase() + "<br>");
+		document.write("LowerCase : " + text.toLowerCase() + "<br>");
+		document.write("Replaced Text : " + text.replace('Awesome','Web development language') + "<br>");
+		document.write("Trim : " + text.trim() + "<br>");
+		document.write("Index of 'Script' : " + text.indexOf('Script') + "<br>");
+		document.write("Char At index 5 : " + text.charAt(5) + "<br>");
+		document.write("SubString(2.13) : " + text.substring(1,12) + "<br>");	/*start and end index*/
+		var concat = text.concat('I love it!') ;
+		document.write("Concat : " + concat);
+	</script>
+</body>
+</html>
+ 
+14)
+a) <!-- Design a appropriate function should be called to display  "Factorial of that number"-->
+<html>
+<body>
+	<script>
+		function factorial(n)
+		{
+			if(n==0 || n==1)
+				return 1;
+			else
+				return n*factorial(n-1)
+		}
+
+		var num = parseInt(prompt('Enter a number : '));
+		document.write('Factorial of ' + num + ' is ' + factorial(num))
+	</script>
+	
+</body>
+</html>
+
+b) <!-- Design a appropriate function should be called to display  "Fibonacci Series upto that number"-->
+<html>
+<body>
+	<script>
+
+		function fibonacci(n)
+		{
+			var a=0,b=1,c=0;
+			document.write('Fibonacci Series upto ' + n + ' is ');
+			document.write(a + " " + b);
+
+			c=a+b;
+			while(c<=n)
+			{
+				document.write(" "+ c);
+				a=b;
+				b=c;
+				c=a+b;
+			}
+		}
+
+		var num = parseInt(prompt('Enter a number : '));
+		fibonacci(num);
+	</script>
+</body>
+</html>	
